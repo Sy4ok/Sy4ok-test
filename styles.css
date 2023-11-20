@@ -1,0 +1,236 @@
+@font-face {
+    font-display: swap;
+    font-family: 'Poppins';
+    font-weight: 300;
+    src: url('../fonts/poppins-v20-latin-300.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Poppins';
+    font-weight: 400;
+    src: url('../fonts/poppins-v20-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Poppins';
+    font-weight: 600;
+    src: url('../fonts/poppins-v20-latin-600.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Poppins';
+    font-weight: 900;
+    src: url('../fonts/poppins-v20-latin-900.woff2') format('woff2');
+}
+
+:root {
+    --color-primary-dark: #31261A;
+    --color-primary-light: #FAF4EA;
+    --color-brand-light: #819B57;
+    --color-brand-dark: #465929;
+}
+
+/* Base */
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin-top: 0;
+}
+
+body {
+    color: var(--color-primary-dark);
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0px;
+}
+
+address {
+    font-style: normal;
+}
+
+ul {
+    list-style-type: none;
+}
+/* .button {
+    border: 4px solid pink;
+}
+
+.button[disabled] {
+    border: 4px solid black;
+} */
+
+/* .main-section > h1 {
+    color: orange;
+} */
+
+.visually-hidden {
+position: absolute;
+ left: -10000px;
+ top: auto;
+  width: 1px;
+ height: 1px;
+ overflow: hidden;    
+}
+
+.section {
+    padding: 48px 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1288px;
+    margin: 0 auto
+}
+
+/* Button */
+.button {
+    padding: 16px 32px;
+    color: var(--color-primary-light);
+    background-color: var(--color-brand-light);
+    border: 2px solid var(--color-brand-light);
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.button:hover {
+    color: var(--color-brand-dark);
+    background-color: transparent;
+}
+
+/* .button:active {
+    background-color: hotpink; 
+} */
+
+/* .main-section >p {
+    color: orange;
+} */
+
+/* Link */
+.link {
+    color: var(--color-primary-light);
+    text-decoration: none;
+}
+
+.link:hover {
+    color: var(--color-brand-light);
+    font-weight: 600;
+    /* text-decoration: underline; */
+}
+
+/* Hero section */
+.hero-section {
+padding: 272px 0;
+}
+
+.hero-title {
+    margin-bottom: 0;
+    color: var(--color-primary-light) ;
+    text-align: center;
+    font-size: 128px;
+    font-weight: 900;
+    /* font-style: italic; */
+    /* text-shadow: 2px 2px 4px violet */
+    /* word-spacing: 4px; */
+}
+
+.hero-title .accent {
+    color: var(--color-brand-light)
+}
+
+/* Advantages section */
+.advantages-list {
+    background-color: var(--color-brand-light);
+    color: var(--color-primary-light);
+}
+
+.advantages-item {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.section-title {
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 1.3;
+}
+
+.section-title .accent {
+    color: var(--color-brand-dark);
+
+}
+
+/* Traditional-text */
+/* .traditional-text {
+white-space: nowrap;
+} */
+
+.traditional-title {
+    margin-bottom: 42px;
+}
+
+.traditional-section {
+    padding-top: 96px;
+}
+
+.traditional-text .brand {
+    color: var(--color-brand-light);
+    font-weight: 600;
+}
+
+.traditional-text .uppercase {
+    text-transform: uppercase;
+}
+/* Cookers title" */
+.cookers-title {
+    margin-bottom: 16px;                             
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.cookerss-title {
+margin-bottom: 80px;
+}
+
+/* Formats section */
+.formats-title {
+    margin-bottom: 80px;
+}
+
+.format-title {
+font-size: 24px;
+font-weight: 600;
+}
+
+.format-text {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+/* Contact sectiom*/
+
+.contact-title {
+margin-bottom: 16px;
+}
+
+/* Foter */
+.address-link {
+    font-size: 16px;
+    font-weight: 300;
+    text-decoration: none;
+    color: var(--color-primary-light);
+}
+
+.address-link:hover {
+    color: var(--color-brand-light);
+}
+
+.address-copyright {
+    font-size: 14px
+}
