@@ -97,7 +97,7 @@ position: absolute;
 .container {
     width: 100%;
     max-width: 1288px;
-    margin: 0 auto
+    margin: 0 auto;
 }
 
 /* Button */
@@ -127,6 +127,7 @@ position: absolute;
 .link {
     color: var(--color-primary-light);
     text-decoration: none;
+    transition: color 0.3s;
 }
 
 .link:hover {
@@ -136,7 +137,11 @@ position: absolute;
 
 /* Header */
 .header {
-    background-color: lightgray; /*remove*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 32px;
 }
 
 .header-container {
@@ -161,7 +166,11 @@ position: absolute;
 
 /* Hero section */
 .hero-section {
-background-image: url('../images/manwoman-background.jpg');
+background-image: linear-gradient(103deg,
+ rgba(18, 18, 17, 0.78) 2.03%,
+ rgba(18, 18, 17, 0.60) 58.46%,
+ rgba(18, 18, 17, 0.00) 90.36%), 
+ url('../images/manwoman-background.jpg');
 background-repeat: no-repeat;
 background-position: center top;
 background-size: cover;
@@ -251,7 +260,7 @@ white-space: nowrap;
 .traditional-text.limited {
     max-width: 330px;
 }
-/* Cookers title" */
+/* Cooker section" */
 .cookers-title {
     margin-bottom: 16px;                             
     font-size: 40px;
@@ -260,7 +269,8 @@ white-space: nowrap;
 
 .cookerss-title::after,
 .cookerss-title::before {
-    display: block;
+    bottom: 24px;
+    position: absolute;
     width: 352px;
     border: 2px solid var(--color-brand-light);
     content: '';
@@ -283,7 +293,15 @@ white-space: nowrap;
 
 .cookerss-title {
 margin: 0 auto 80px;
-max-width: 520px;
+position: relative;
+}
+
+.cookerss-title::before {
+    left: 0px;
+}
+
+.cookerss-title::after {
+    right: 0px;
 }
 
 .chef-photo {
@@ -315,6 +333,11 @@ max-width: 520px;
     border: 1px solid lightgray; /*remove*/
     border-radius: 16px;
     background-image: linear-gradient(180deg, rgba(49, 38, 26, 0.00) 55.21%, rgba(49, 38, 26, 0.71) 72.92%, var(--color-primary-dark) 100%);
+    transition: transform 0.3s;
+}
+
+.format-card:hover {
+    transform: scale(1.05);
 }
 
 .formats-title {
@@ -356,6 +379,10 @@ font-weight: 600;
     background-color: var(--color-primary-dark);
 }
 
+.carousel-button.next {
+    transform: rotate(180deg);
+}
+
 .carousel-arrow {
     fill: var(--color-primary-dark);
 }
@@ -386,7 +413,35 @@ margin-bottom: 16px;
 
 /* Foter */
 .footer {
+    background-image: url('../images/footer-background.png');
+    background-color: var(--color-primary-dark);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
     padding: 32px 0;
+}
+
+.footer::before,
+.footer::after {
+    position: absolute;
+    bottom: 0;
+    background-repeat: no-repeat;
+    content: '';
+}
+
+.footer::before {
+    background-image: url('../images/decor-bread-one.png');
+    width: 180px;
+    height: 120px;
+    left: 0;
+}
+
+.footer::after {
+    background-image: url('../images/decor-bread-two.png');
+    width: 360px;
+    height: 190px;
+    right: 0;
 }
 
 .footer-container {
@@ -439,10 +494,39 @@ gap: 20px;
     font-size: 14px
 }
 
-.footer {
-    background-image: url('../images/footer-background.png');
-    background-color: var(--color-primary-dark);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+/* Modal */
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.modal {
+    width: 100%;
+    max-width: 880px;
+    height: 100%;
+    max-height: 880px;
+    background-color: var(--color-primary-light);
+    border-radius: 32px;
+    position: relative;
+}
+
+.modal-btn-close {
+    position: absolute;
+    top: 40px;
+    right: 40px;
 }
