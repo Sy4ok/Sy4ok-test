@@ -85,7 +85,7 @@ ul {
 position: absolute;
  left: -10000px;
  top: auto;
-  width: 1px;
+ width: 1px;
  height: 1px;
  overflow: hidden;    
 }
@@ -520,13 +520,71 @@ gap: 20px;
     max-width: 880px;
     height: 100%;
     max-height: 880px;
+    padding: 128px;
     background-color: var(--color-primary-light);
     border-radius: 32px;
     position: relative;
+    overflow-y: auto;
 }
 
 .modal-btn-close {
     position: absolute;
     top: 40px;
     right: 40px;
+}
+
+/* Forms */
+.form-field {
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.form-label {
+    position: absolute;
+    top: 16px;
+    left: 42px;
+}
+
+.form-imput {
+    padding: 16px 42px;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 16px;
+    line-height: 1.17;
+    border: 1px solid var(--color-secondary-dark);
+    background-color: transparent;
+}
+
+.form-imput:focus {
+    border-color: var(--color-brand-normal);
+    outline: none;
+}
+
+.form-imput::placeholder {
+    color: var(--color-secondary-dark);
+    font-size: 16px;
+    line-height: 1.17;
+}
+
+.form-imput:focus::placeholder {
+    color: var(--color-primary-dark);
+}
+
+.form-button {
+    display: block;
+    margin: 0 auto 24px;
+}
+
+.form-terns {
+    max-width: 220px;
+    font-size: 12px;
+    line-height: 1.5;
+    font-weight: 500;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.form-terns-link {
+    color: var(--color-primary-dark);
+    text-underline-offset: 2px;
 }
