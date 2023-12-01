@@ -110,9 +110,17 @@ position: absolute;
     cursor: pointer;
     font-weight: 600;
 }
+
+/* .button:disabled {
+    color: gray;
+    background-color: lightgrey;
+    cursor: not-allowed;
+    background-color: transparent;
+} */
+
 .button:hover {
     color: var(--color-brand-dark);
-    background-color: transparent;
+    border-color: currentColor;
 }
 
 /* .button:active {
